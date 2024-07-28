@@ -31,3 +31,6 @@ class Vector:
 
     def get_length(self) -> int | float:
         return sqrt(self.x ** 2 + self.y ** 2)
+
+    def get_normalized(self) -> Vector:
+        return Vector(self.x / self.get_length(), self.y / self.get_length())

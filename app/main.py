@@ -1,5 +1,5 @@
 from __future__ import annotations
-from math import sqrt, degrees, acos
+from math import sqrt, degrees, radians, acos, cos, sin
 
 class Vector:
 

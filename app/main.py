@@ -14,3 +14,8 @@ class Vector:
     def __sub__(self, other: Vector) -> Vector:
         if isinstance(other, Vector):
             return Vector(self.x - other.x, self.y - other.y)
+
+    def __mul__(self, other: Vector | float | int) -> int | float | Vector:
+        if isinstance(other, Vector):
+            return self.x * other.x + self.y * other.y
+        return Vector(other * self.x, other * self.y)

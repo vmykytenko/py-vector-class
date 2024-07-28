@@ -44,3 +44,5 @@ class Vector:
             )
         )
 
+    def get_angle(self) -> int:
+        return self.angle_between(Vector(0, 1))

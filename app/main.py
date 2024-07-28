@@ -1,6 +1,7 @@
 from __future__ import annotations
 from math import sqrt, degrees, radians, acos, cos, sin
 
+
 class Vector:
 
     def __init__(self, abscissa: int | float, ordinate: int | float) -> None:
@@ -46,3 +47,9 @@ class Vector:
 
     def get_angle(self) -> int:
         return self.angle_between(Vector(0, 1))
+
+    def rotate(self, angle: int | float) -> Vector:
+        return Vector(
+            cos(radians(angle)) * self.x - sin(radians(angle)) * self.y,
+            sin(radians(angle)) * self.x + cos(radians(angle)) * self.y
+        )
